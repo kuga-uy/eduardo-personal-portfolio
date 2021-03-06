@@ -1,0 +1,281 @@
+//font-family: 'Lexend Exa', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
+//font-family: 'Righteous', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+//variables
+
+$font-color: #fff;
+$secondary-color: #089c55;
+$primary-color: #022334;
+
+//@mixins
+
+@mixin button-style {
+    margin-left: 1rem;
+    width:10rem;
+    height: 3rem;
+    border-radius: 50px;
+    background-color: $secondary-color;
+    border: none;
+    outline: none;
+    color: $font-color;
+    font-family: 'Righteous', cursive;
+    opacity: 0;
+    visibility: hidden;
+    animation: introAnimation 1s 1s forwards;
+    transition: all 1s ease;
+    &:hover {
+        background-color:$primary-color;
+    }
+  }
+
+/*common styles*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_body {
+    position: relative;
+    //background-color: black;
+}
+
+.navbar{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: $primary-color;
+    height: 3rem;
+    width: 100%;
+    animation: navbar 1s .5s forward;
+    h2{
+        color: $font-color;
+        font-family: 'Lexend Exa', sans-serif;
+        margin-left: 2rem;
+        span {
+            color: $secondary-color;
+            font-family: 'Righteous', cursive;
+        }
+    }
+} 
+
+@keyframes navbar{
+    0%{
+        top: -8rem;
+    }
+    100%{
+        top: 0;
+    }
+}
+
+
+.banner_section{
+    display: none;
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    .banner{
+        top: 30%;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+.banner_heading{
+    margin-bottom: 10rem;
+    perspective: 60rem;
+    span {
+        position: absolute;
+        font-family:'Righteous', cursive;
+        font-weight: 500;
+        font-size: 5rem;
+        color:$font-color;
+        text-shadow: .3rem .3rem .6rem rgba(0,0,0, 0.5);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        transform: translateZ(8rem);
+        opacity: 0;
+        letter-spacing: 2rem;
+    }
+    
+}
+        //animation of each heading
+
+        .heading_1{
+            animation: animateHeading 12s 3s infinite;
+        }
+        .heading_2{
+            animation: animateHeading 12s 6s infinite;
+        }
+        .heading_3{
+            animation: animateHeading 12s 9s infinite;
+        }
+        .heading_4{
+            animation: animateHeading 12s 12s infinite;
+        }
+
+        @keyframes animateHeading {
+            0%{
+                transform: translateZ(8rem);
+                opacity: 0;
+                letter-spacing: 2rem;
+            }
+            3%{
+                transform:translateZ(0rem);
+                opacity: 1;
+                letter-spacing: .5rem;
+            }
+            25%{
+                transform: translateZ(0rem);
+                opacity: 1;
+                letter-spacing: .5rem;
+            }
+            28%{
+                transform: translateZ(8rem);
+                opacity: 0;
+                letter-spacing: 2rem;
+            }
+            100%{
+                transform: translateZ(8rem);
+                opacity: 0;
+                letter-spacing: 2rem;
+            }
+        }
+
+        .banner_phrase{
+            color: $font-color;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(0,0,0,0.5);
+            width: 50%;
+            margin: 0 auto 3rem auto;
+            opacity: 0;
+            visibility: hidden;
+            animation: introAnimation 2s 2s forwards;
+        }
+    
+ 
+
+ .banner_btn{
+  @include button-style;
+ }
+
+
+ @keyframes introAnimation{
+     0%{
+         opacity: 0;
+         visibility: hidden;
+     }
+     100%{
+         opacity: 1;
+         visibility: visible;
+     }
+ }
+
+ // to use opacity in the img background and doesn't affect childs
+ .banner_section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+    background-image: url(assets/banner.jpg);
+    opacity: .2;
+    background-size: 100% 100%;
+}
+
+/*Slide show  projects styles*/
+
+.slide{
+    width: 100%;
+    height: 100vh;
+}
+
+.slide:nth-child(1){
+    background:url(./assets/surveyFullscreen.png) center no-repeat;
+    background-size: cover;
+}
+.slide:nth-child(2){
+    background: url(./assets/TodolistFull.png);
+    background-size: cover;
+}
+.slide:nth-child(3){
+    background: url(./assets/kugaDesignsFull.png);
+    background-size: cover;
+}
+.slide:nth-child(4){
+    background: url(./assets/jajankenFull.png);
+    background-size: cover;
+}
+
+.content{
+    width: 500px;
+    position: relative;
+    top: 35%;
+    left: 5%;
+}
+
+.content h3{
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: 'Righteous', cursive;
+    color: $font-color;
+    margin-bottom: 2rem;
+}
+.content p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: $font-color;
+    margin-bottom: 2rem;
+}
+
+.slide_btn{
+    @include button-style;
+}
+
+.slideshow{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    position: relative;
+    animation: slideshow 24s infinite;
+}
+
+/*@mixin left ($position){
+    left: $position;
+}
+@function slideshowFunction($porcentage){
+    @if (transition <= 10%){
+        @return  $left(0); 
+    }
+    @if (transition <= 25%){
+        @return  $left(-100%); 
+    }
+}*/
+
+@keyframes slideshow {
+    0%{left: 0}
+    10%{left: 0}
+    15%{left: -100%}
+    25%{left: -100%}
+    30%{left: -200%}
+    45%{left: -300%}
+    50%{left: -300%}
+    60%{left: -400%}
+    65%{left: -400%}
+    75%{left: -100%}
+    80%{left: -100%}
+    90%{left: -100%}
+    100%{left: 0}
+}
