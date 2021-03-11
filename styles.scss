@@ -1,3 +1,5 @@
+//font-family: 'Rubik', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 //font-family: 'Lexend Exa', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 //font-family: 'Righteous', cursive;
@@ -15,7 +17,7 @@ $primary-color: #022334;
     margin-left: 1rem;
     width:10rem;
     height: 3rem;
-    border-radius: 50px;
+    border-radius: 10px;
     background-color: $secondary-color;
     border: none;
     outline: none;
@@ -27,6 +29,7 @@ $primary-color: #022334;
     transition: all 1s ease;
     &:hover {
         background-color:$primary-color;
+        border: $font-color solid 2px;
     }
   }
 
@@ -37,12 +40,18 @@ $primary-color: #022334;
     padding:0;
     box-sizing: border-box;
     outline: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
 }
-
+/*-------------------------------*HEADER*-------------------*/
+html{
+    scroll-behavior: smooth;
+}
 .main_body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    //background-color: black;
+    background-color: black;
 }
 
 .navbar{
@@ -52,7 +61,7 @@ $primary-color: #022334;
     background-color: $primary-color;
     height: 3rem;
     width: 100%;
-    animation: navbar 1s .5s forward;
+    z-index: 10;
     h2{
         color: $font-color;
         font-family: 'Lexend Exa', sans-serif;
@@ -64,23 +73,14 @@ $primary-color: #022334;
     }
 } 
 
-@keyframes navbar{
-    0%{
-        top: -8rem;
-    }
-    100%{
-        top: 0;
-    }
-}
-
 
 .banner_section{
-    display: none;
+    overflow: hidden;
+    display: flex;
     position:relative;
     width: 100%;
     height: 100vh;
     .banner{
-        top: 30%;
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -91,9 +91,11 @@ $primary-color: #022334;
 }
 
 .banner_heading{
+    margin-top: 500px;
     margin-bottom: 10rem;
     perspective: 60rem;
     span {
+        margin-top: -10%;
         position: absolute;
         font-family:'Righteous', cursive;
         font-weight: 500;
@@ -112,17 +114,21 @@ $primary-color: #022334;
         //animation of each heading
 
         .heading_1{
-            animation: animateHeading 12s 3s infinite;
+            animation: animateHeading 10s 2s infinite;
         }
         .heading_2{
-            animation: animateHeading 12s 6s infinite;
+            animation: animateHeading 10s 4s infinite;
         }
         .heading_3{
-            animation: animateHeading 12s 9s infinite;
+            animation: animateHeading 10s 6s infinite;
         }
         .heading_4{
-            animation: animateHeading 12s 12s infinite;
+            animation: animateHeading 10s 8s infinite;
         }
+        .heading_5{
+        animation: animateHeading 10s 10s infinite;
+        }
+
 
         @keyframes animateHeading {
             0%{
@@ -130,44 +136,53 @@ $primary-color: #022334;
                 opacity: 0;
                 letter-spacing: 2rem;
             }
-            3%{
+            2%{
                 transform:translateZ(0rem);
                 opacity: 1;
                 letter-spacing: .5rem;
             }
-            25%{
+            15%{
                 transform: translateZ(0rem);
                 opacity: 1;
                 letter-spacing: .5rem;
             }
-            28%{
+            40%{
                 transform: translateZ(8rem);
                 opacity: 0;
                 letter-spacing: 2rem;
             }
-            100%{
+            50%{
                 transform: translateZ(8rem);
                 opacity: 0;
                 letter-spacing: 2rem;
+                color: $primary-color;
             }
         }
 
         .banner_phrase{
+            position: relative;
+           top: 80px;
             color: $font-color;
             font-size: 1.5rem;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: rgba(0,0,0,0.5);
             width: 50%;
-            margin: 0 auto 3rem auto;
-            opacity: 0;
+            margin: 0 auto;
             visibility: hidden;
-            animation: introAnimation 2s 2s forwards;
+            animation: introAnimation 2s 1.5s forwards;
         }
     
  
 
  .banner_btn{
   @include button-style;
+  position: relative;
+  margin-top: 150px;
+  a {
+      display: block;
+      width:100%;
+      color: $font-color;
+      text-decoration: none;
+  }
  }
 
 
@@ -185,6 +200,7 @@ $primary-color: #022334;
  // to use opacity in the img background and doesn't affect childs
  .banner_section::before{
     content: "";
+    object-fit: cover;
     position: absolute;
     top: 0;
    left: 0;
@@ -192,90 +208,296 @@ $primary-color: #022334;
    bottom: 0;
     background-image: url(assets/banner.jpg);
     opacity: .2;
-    background-size: 100% 100%;
 }
 
-/*Slide show  projects styles*/
+/*Projects Section*/
 
-.slide{
-    width: 100%;
-    height: 100vh;
-}
+    .projects_container{
+        overflow-x: hidden;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        .project1, .project2, .project3, .project4, .project5{
+            background-color: $primary-color;
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            grid-template-columns: 1fr 1fr;
+            h3{
+                margin-bottom: 30px;
+            }
+            button{
+                margin: 20px;
+            }
+        }
+    }
 
-.slide:nth-child(1){
-    background:url(./assets/surveyFullscreen.png) center no-repeat;
-    background-size: cover;
-}
-.slide:nth-child(2){
-    background: url(./assets/TodolistFull.png);
-    background-size: cover;
-}
-.slide:nth-child(3){
-    background: url(./assets/kugaDesignsFull.png);
-    background-size: cover;
-}
-.slide:nth-child(4){
-    background: url(./assets/jajankenFull.png);
-    background-size: cover;
-}
 
-.content{
-    width: 500px;
+.project_imgs1, .project_imgs2, .project_imgs3, .project_imgs3,
+.project_imgs4, .project_imgs5 {
+    display:flex;
     position: relative;
-    top: 35%;
-    left: 5%;
-}
-
-.content h3{
-    font-weight: 500;
-    font-size: 2rem;
-    font-family: 'Righteous', cursive;
-    color: $font-color;
-    margin-bottom: 2rem;
-}
-.content p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    color: $font-color;
-    margin-bottom: 2rem;
-}
-
-.slide_btn{
-    @include button-style;
-}
-
-.slideshow{
-    display: flex;
-    width: 500%;
     height: 100%;
-    position: relative;
-    animation: slideshow 24s infinite;
+    width: 100%;
 }
 
-/*@mixin left ($position){
-    left: $position;
+.project_content{
+    font-size: 1.3rem;
+    padding-left: 20%;
+    padding-right: 20%;
+    color: $font-color;
 }
-@function slideshowFunction($porcentage){
-    @if (transition <= 10%){
-        @return  $left(0); 
-    }
-    @if (transition <= 25%){
-        @return  $left(-100%); 
-    }
-}*/
 
-@keyframes slideshow {
-    0%{left: 0}
-    10%{left: 0}
-    15%{left: -100%}
-    25%{left: -100%}
-    30%{left: -200%}
-    45%{left: -300%}
-    50%{left: -300%}
-    60%{left: -400%}
-    65%{left: -400%}
-    75%{left: -100%}
-    80%{left: -100%}
-    90%{left: -100%}
-    100%{left: 0}
+
+.btn {
+    @include button-style();
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+}
+
+.phone_img{
+    position: absolute;
+    height: 50%; 
+    width:116px;
+    top: 120px;
+    left: calc(190px);
+}
+
+.phone_screen{
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    width: 86px;
+    height: 154px;
+    top: 151px;
+    left: calc(205px);   
+}
+
+@keyframes screenOn {
+    0% {opacity: 0;}
+    100%{ opacity: 1;}
+}
+
+.desktop_img{
+    object-fit: cover;
+    position: absolute;
+    margin-left: 25%;
+    width: 500px;
+    height: 60%;
+    transform: translateY(30%);
+}
+
+#live_preview-btn{
+    position: absolute;
+    left: calc(250px);
+    top: 80%;
+}
+
+
+/* --------------------------- CONTACT SECTION----------------------*/
+.form_section{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        display: flex;
+        color: $font-color;
+        .form_content{
+        padding-top: 60px;
+        position: absolute;
+        top: 0;
+        z-index: 20;
+        height: 500px;
+        width: 600px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .textcontent{
+            outline: none;
+            border: none;
+            width: 50%;
+            height: 30%;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+        .input{
+            width: 40%;
+            border-radius: 20px;
+            height: 30px;
+            outline: none;
+            border: none;
+            margin: 20px;
+            padding-left: 20px; 
+        }
+        .send_btn{
+            @include button-style();
+            margin: 20px;
+        }
+        }
+        .video_container{
+            z-index: 5;
+            position: absolute;
+            top:0;
+            left:0;
+            object-fit: cover;
+            opacity: .05;
+            .bg_video{
+                position: relative;
+                left: -300px;
+                top: -800px;
+                }
+            }
+        }
+    
+  .form_container{
+      justify-content: center;
+      padding-top: 30px;
+      z-index: 10;
+     width: 100%;
+     display: flex;
+     float: right;
+  }
+
+.projects_container button a{
+    text-decoration: none;
+    color: $font-color;
+    width: 100%;
+}
+
+/*---------------------------MEDIA QUERIES------*/
+@media (max-width: 1500px){
+    .desktop_img{
+        left: calc(-20%);
+    }
+
+    .phone_img{
+        left: calc(75px);
+    }
+    
+    .phone_screen{
+        left: calc(90px);
+    }
+
+    #live_preview-btn{
+        left: calc(100px);
+    }
+}
+
+
+
+@media (max-width: 1100px){
+
+    .project_content{
+        font-size: 1rem;
+     }
+
+    .desktop_img{
+        left: calc(-35%);
+    }
+    .phone_img{
+        left: calc(-15px);
+    }
+    
+    .phone_screen{
+        left: calc(0px);
+    }
+}
+
+@media(max-width: 900px){
+    .desktop_img{
+        top: 5%;
+        width: 400px;
+        height: 200px;
+    }
+
+    .banner_heading{
+        margin-top: 150px;
+    }
+
+    .banner_phrase{
+        top: 60px;
+        font-size: 1rem;
+    }
+
+    .banner_btn{
+        display: block;
+        left: calc(50% - 100px);
+        margin-top: 20px;
+        top: 80px;
+    }
+}
+
+@media (max-width:780px ){
+    .desktop_img{
+        top: 10%;
+        width: 300px;
+        height: 150px;
+    }
+    .banner_heading span{
+        font-size: 2.5rem;
+    }
+
+    #live_preview-btn{
+        left: calc(0px);
+    }
+
+    .banner_btn{
+        display: block;
+        left: calc(50% - 100px);
+        margin-top: 20px;
+        top: 150px;
+    }
+}
+
+
+@media (max-width: 600px){
+
+    .project_content{
+        font-size: .8rem;
+     }
+
+    .banner_heading span{
+        font-size: 2rem;
+    }
+
+    .desktop_img{
+        display: none;
+    }
+    .project1, .project2, .project3, .project4, .project5{
+        height: 500px;
+    }
+
+    .project_content{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .phone_img{
+        top: 80px;
+        left: calc(50px);
+    }
+    
+    .phone_screen{
+        top: 110px;
+        left: calc(65px);
+    }
+}
+
+@media (max-width: 400px){
+    #live_preview-btn{
+        left: calc(-100px);
+    }
+
+    .phone_img{
+        left: calc(0px);
+    }
+    
+    .phone_screen{
+        left: calc(15px);
+    }
 }
