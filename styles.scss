@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 //font-family: 'Rubik', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+=======
+<<<<<<< HEAD
+//font-family: 'Rubik', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 //font-family: 'Lexend Exa', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 //font-family: 'Righteous', cursive;
@@ -40,14 +48,29 @@ $primary-color: #022334;
     padding:0;
     box-sizing: border-box;
     outline: none;
+<<<<<<< HEAD
     font-family: 'Rubik', sans-serif;
+=======
+<<<<<<< HEAD
+    font-family: 'Rubik', sans-serif;
+=======
+    font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 }
 /*-------------------------------*HEADER*-------------------*/
 html{
     scroll-behavior: smooth;
 }
 .main_body {
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+<<<<<<< HEAD
+    overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
     display: flex;
     flex-direction: column;
     position: relative;
@@ -211,6 +234,7 @@ html{
 }
 
 /*Projects Section*/
+<<<<<<< HEAD
 
     .projects_container{
         overflow-x: hidden;
@@ -235,6 +259,39 @@ html{
     }
 
 
+=======
+
+    .projects_container{
+<<<<<<< HEAD
+        overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        .project1, .project2, .project3, .project4, .project5{
+<<<<<<< HEAD
+=======
+            overflow-x: hidden;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+            background-color: $primary-color;
+            width: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 450px;
+            grid-template-columns: 1fr 1fr;
+            h3{
+                margin-bottom: 30px;
+            }
+            button{
+                margin: 20px;
+            }
+        }
+    }
+
+
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 .project_imgs1, .project_imgs2, .project_imgs3, .project_imgs3,
 .project_imgs4, .project_imgs5 {
     display:flex;
@@ -244,6 +301,7 @@ html{
 }
 
 .project_content{
+<<<<<<< HEAD
     font-size: 1.3rem;
     padding-left: 20%;
     padding-right: 20%;
@@ -278,6 +336,45 @@ html{
     left: calc(205px);   
 }
 
+=======
+<<<<<<< HEAD
+    font-size: 1.3rem;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+    padding-left: 20%;
+    padding-right: 20%;
+    color: $font-color;
+}
+
+
+.btn {
+    @include button-style();
+}
+
+.card{
+    width: 100%;
+    height: 100%;
+}
+
+.phone_img{
+    position: absolute;
+    height: 50%; 
+    width:116px;
+    top: 120px;
+    left: calc(190px);
+}
+
+.phone_screen{
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    width: 86px;
+    height: 154px;
+    top: 151px;
+    left: calc(205px);   
+}
+
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 @keyframes screenOn {
     0% {opacity: 0;}
     100%{ opacity: 1;}
@@ -298,6 +395,10 @@ html{
     top: 80%;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 
 /* --------------------------- CONTACT SECTION----------------------*/
 .form_section{
@@ -370,6 +471,7 @@ html{
 }
 
 /*---------------------------MEDIA QUERIES------*/
+<<<<<<< HEAD
 @media (max-width: 1500px){
     .desktop_img{
         left: calc(-20%);
@@ -391,11 +493,46 @@ html{
 
 
 @media (max-width: 1100px){
+=======
+=======
+.form_section{
+    display: flex;
+}
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+@media (max-width: 1500px){
+    .desktop_img{
+        left: calc(-20%);
+    }
+
+    .phone_img{
+        left: calc(75px);
+    }
+    
+    .phone_screen{
+        left: calc(90px);
+    }
+
+    #live_preview-btn{
+        left: calc(100px);
+    }
+}
+
+
+
+@media (max-width: 1100px){
+<<<<<<< HEAD
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 
     .project_content{
         font-size: 1rem;
      }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
     .desktop_img{
         left: calc(-35%);
     }
@@ -406,8 +543,30 @@ html{
     .phone_screen{
         left: calc(0px);
     }
+<<<<<<< HEAD
 }
 
+@media(max-width: 900px){
+    .desktop_img{
+        top: 5%;
+        width: 400px;
+        height: 200px;
+    }
+
+    .banner_heading{
+        margin-top: 150px;
+    }
+
+    .banner_phrase{
+        top: 60px;
+        font-size: 1rem;
+=======
+}
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 @media(max-width: 900px){
     .desktop_img{
         top: 5%;
@@ -428,6 +587,30 @@ html{
         display: block;
         left: calc(50% - 100px);
         margin-top: 20px;
+        top: 80px;
+    }
+}
+
+@media (max-width:780px ){
+    .desktop_img{
+        top: 10%;
+        width: 300px;
+        height: 150px;
+    }
+    .banner_heading span{
+        font-size: 2.5rem;
+    }
+
+    #live_preview-btn{
+        left: calc(0px);
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
+    }
+
+    .banner_btn{
+        display: block;
+        left: calc(50% - 100px);
+        margin-top: 20px;
+<<<<<<< HEAD
         top: 80px;
     }
 }
@@ -488,6 +671,51 @@ html{
     }
 }
 
+=======
+        top: 150px;
+    }
+}
+
+<<<<<<< HEAD
+
+@media (max-width: 600px){
+
+    .project_content{
+        font-size: .8rem;
+     }
+
+=======
+@media (max-width: 600px){
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
+    .banner_heading span{
+        font-size: 2rem;
+    }
+
+    .desktop_img{
+        display: none;
+    }
+    .project1, .project2, .project3, .project4, .project5{
+        height: 500px;
+    }
+
+    .project_content{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .phone_img{
+        top: 80px;
+        left: calc(50px);
+    }
+    
+    .phone_screen{
+        top: 110px;
+        left: calc(65px);
+    }
+}
+
+>>>>>>> 2b6f9142637b45b7f9c059de0e993db4243346a3
 @media (max-width: 400px){
     #live_preview-btn{
         left: calc(-100px);
