@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 //font-family: 'Rubik', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 //font-family: 'Lexend Exa', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap');
 //font-family: 'Righteous', cursive;
@@ -40,14 +43,21 @@ $primary-color: #022334;
     padding:0;
     box-sizing: border-box;
     outline: none;
+<<<<<<< HEAD
     font-family: 'Rubik', sans-serif;
+=======
+    font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 }
 /*-------------------------------*HEADER*-------------------*/
 html{
     scroll-behavior: smooth;
 }
 .main_body {
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
     display: flex;
     flex-direction: column;
     position: relative;
@@ -213,11 +223,18 @@ html{
 /*Projects Section*/
 
     .projects_container{
+<<<<<<< HEAD
         overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
         width: 100vw;
         display: flex;
         flex-direction: column;
         .project1, .project2, .project3, .project4, .project5{
+<<<<<<< HEAD
+=======
+            overflow-x: hidden;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
             background-color: $primary-color;
             width: 100%;
             display: grid;
@@ -244,7 +261,10 @@ html{
 }
 
 .project_content{
+<<<<<<< HEAD
     font-size: 1.3rem;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
     padding-left: 20%;
     padding-right: 20%;
     color: $font-color;
@@ -298,6 +318,7 @@ html{
     top: 80%;
 }
 
+<<<<<<< HEAD
 
 /* --------------------------- CONTACT SECTION----------------------*/
 .form_section{
@@ -370,6 +391,12 @@ html{
 }
 
 /*---------------------------MEDIA QUERIES------*/
+=======
+.form_section{
+    display: flex;
+}
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 @media (max-width: 1500px){
     .desktop_img{
         left: calc(-20%);
@@ -391,11 +418,14 @@ html{
 
 
 @media (max-width: 1100px){
+<<<<<<< HEAD
 
     .project_content{
         font-size: 1rem;
      }
 
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
     .desktop_img{
         left: calc(-35%);
     }
@@ -408,6 +438,10 @@ html{
     }
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 @media(max-width: 900px){
     .desktop_img{
         top: 5%;
@@ -454,6 +488,7 @@ html{
     }
 }
 
+<<<<<<< HEAD
 
 @media (max-width: 600px){
 
@@ -461,6 +496,10 @@ html{
         font-size: .8rem;
      }
 
+=======
+@media (max-width: 600px){
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
     .banner_heading span{
         font-size: 2rem;
     }

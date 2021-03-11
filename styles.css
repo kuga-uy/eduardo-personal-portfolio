@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Exa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 /*common styles*/
@@ -8,7 +11,11 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+<<<<<<< HEAD
   font-family: 'Rubik', sans-serif;
+=======
+  font-family: Arial, Helvetica, sans-serif;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 }
 
 /*-------------------------------*HEADER*-------------------*/
@@ -17,7 +24,10 @@ html {
 }
 
 .main_body {
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,7 +287,10 @@ html {
 
 /*Projects Section*/
 .projects_container {
+<<<<<<< HEAD
   overflow-x: hidden;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,6 +302,10 @@ html {
 }
 
 .projects_container .project1, .projects_container .project2, .projects_container .project3, .projects_container .project4, .projects_container .project5 {
+<<<<<<< HEAD
+=======
+  overflow-x: hidden;
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   background-color: #022334;
   width: 100%;
   display: -ms-grid;
@@ -323,7 +340,10 @@ html {
 }
 
 .project_content {
+<<<<<<< HEAD
   font-size: 1.3rem;
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   padding-left: 20%;
   padding-right: 20%;
   color: #fff;
@@ -410,6 +430,7 @@ html {
   top: 80%;
 }
 
+<<<<<<< HEAD
 /* --------------------------- CONTACT SECTION----------------------*/
 .form_section {
   overflow: hidden;
@@ -520,6 +541,14 @@ html {
 }
 
 /*---------------------------MEDIA QUERIES------*/
+=======
+.form_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
 @media (max-width: 1500px) {
   .desktop_img {
     left: calc(-20%);
@@ -536,9 +565,12 @@ html {
 }
 
 @media (max-width: 1100px) {
+<<<<<<< HEAD
   .project_content {
     font-size: 1rem;
   }
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   .desktop_img {
     left: calc(-35%);
   }
@@ -592,9 +624,12 @@ html {
 }
 
 @media (max-width: 600px) {
+<<<<<<< HEAD
   .project_content {
     font-size: .8rem;
   }
+=======
+>>>>>>> 12aea31945ca9d4d75c4650fa41cc785db26267e
   .banner_heading span {
     font-size: 2rem;
   }
