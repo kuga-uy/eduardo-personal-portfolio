@@ -533,6 +533,33 @@ html {
   width: 100%;
 }
 
+.up_button {
+  width: 3rem;
+  height: 3rem;
+  background-color: #0000ff;
+  color: #ffff;
+  position: fixed;
+  bottom: 1rem;
+  right: 1.1rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 30;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+.up_button:hover {
+  background-color: #112ed3;
+}
+
 /*---------------------------MEDIA QUERIES------*/
 @media (max-width: 1500px) {
   .desktop_img {

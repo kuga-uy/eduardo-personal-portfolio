@@ -394,6 +394,24 @@ html{
     width: 100%;
 }
 
+.up_button{
+	width: 3rem;
+    height: 3rem;
+	background-color: #0000ff;
+	color: #ffff;
+	position: fixed;
+	bottom: 1rem;
+	right: 1.1rem;
+	border-radius: 50%;
+	display: flex;
+	align-items:center;
+	z-index: 30;
+	justify-content: center;
+	transition:background-color .3s;
+	&:hover{
+		background-color: #112ed3;
+	}
+}
 /*---------------------------MEDIA QUERIES------*/
 
 
