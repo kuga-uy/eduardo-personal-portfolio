@@ -506,7 +506,7 @@ html {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: .05;
+  opacity: .2;
 }
 
 .form_section .video_container .bg_video {
