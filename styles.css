@@ -301,11 +301,10 @@ html {
           flex-direction: column;
 }
 
-.projects_container .project1, .projects_container .project2, .projects_container .project3, .projects_container .project4, .projects_container .project5, .projects_container .project6 {
+.projects_container #project1, .projects_container #project2, .projects_container #project3, .projects_container #project4, .projects_container #project5, .projects_container #project6 {
   background-color: #022334;
   width: 100%;
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -317,15 +316,15 @@ html {
       grid-template-columns: 1fr 1fr;
 }
 
-.projects_container .project1 h3, .projects_container .project2 h3, .projects_container .project3 h3, .projects_container .project4 h3, .projects_container .project5 h3, .projects_container .project6 h3 {
+.projects_container #project1 h3, .projects_container #project2 h3, .projects_container #project3 h3, .projects_container #project4 h3, .projects_container #project5 h3, .projects_container #project6 h3 {
   margin-bottom: 30px;
 }
 
-.projects_container .project1 .btn, .projects_container .project2 .btn, .projects_container .project3 .btn, .projects_container .project4 .btn, .projects_container .project5 .btn, .projects_container .project6 .btn {
+.projects_container #project1 .btn, .projects_container #project2 .btn, .projects_container #project3 .btn, .projects_container #project4 .btn, .projects_container #project5 .btn, .projects_container #project6 .btn {
   margin: 20px;
 }
 
-.projects_container .project1 .btn a, .projects_container .project2 .btn a, .projects_container .project3 .btn a, .projects_container .project4 .btn a, .projects_container .project5 .btn a, .projects_container .project6 .btn a {
+.projects_container #project1 .btn a, .projects_container #project2 .btn a, .projects_container #project3 .btn a, .projects_container #project4 .btn a, .projects_container #project5 .btn a, .projects_container #project6 .btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +338,29 @@ html {
   height: 100%;
 }
 
-.project_imgs1, .project_imgs2, .project_imgs3, .project_imgs3,
+@-webkit-keyframes projectAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes projectAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.project_imgs1, .project_imgs2, .project_imgs3,
 .project_imgs4, .project_imgs5, .project_imgs6 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,6 +368,8 @@ html {
   position: relative;
   height: 100%;
   width: 100%;
+  -webkit-animation: projectAnimation 2s ease forwards;
+          animation: projectAnimation 2s ease forwards;
 }
 
 .project_content {
@@ -392,6 +415,30 @@ html {
   left: calc(190px);
 }
 
+@-webkit-keyframes screenOn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes screenOn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .phone_screen {
   position: absolute;
   opacity: 0;
@@ -400,12 +447,8 @@ html {
   height: 155px;
   top: 150px;
   left: calc(204px);
-}
-
-.screenOn {
-  opacity: 1;
-  -webkit-transition: opacity 5s ease-in;
-  transition: opacity 5s ease-in;
+  -webkit-animation: screenOn 4s forwards;
+          animation: screenOn 4s forwards;
 }
 
 .desktop_img {
@@ -431,9 +474,7 @@ html {
   position: relative;
   width: 100%;
   height: 500px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   color: #fff;
 }
 
@@ -642,7 +683,7 @@ html {
   .desktop_img {
     display: none;
   }
-  .project1, .project2, .project3, .project4, .project5, .project6 {
+  #project1, #project2, #project3, #project4, #project5, #project6 {
     height: 500px;
   }
   .project_content {
